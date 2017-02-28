@@ -97,13 +97,14 @@ class Weather_Report_Widget extends WP_Widget {
 		<style>
 			.weather-report {
 				background-color: rgba( 255, 255, 255, 0.7 );
-				padding: 3em;
+				padding: 2em;
 			}
 			.weather-report p {
 				margin: 0.5em 0 0;
 				padding: 0;
 				line-height: 1;
 				color: rgba( 0, 0, 0, 0.55 );
+				white-space: nowrap;
 			}
 			.weather-report .temp {
 				margin-top: 0;
@@ -116,6 +117,7 @@ class Weather_Report_Widget extends WP_Widget {
 				font-weight: 600;
 			}
 			.weather-report .updated {
+				display: block; /* twentyfifteen would hide it otherwise */
 				font-size: 0.9em;
 			}
 		</style>
