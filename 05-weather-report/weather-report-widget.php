@@ -89,15 +89,35 @@ class Weather_Report_Widget extends WP_Widget {
 		}
 		?>
 
-		<p><?php esc_html_e( 'Details for Weather Station:', 'weather-report-widget' ); ?></p>
-		<dl>
-			<dt><?php esc_html_e( 'Temperature:', 'weather-report-widget' ); ?></dt>
-			<dd><?php echo esc_html( $report['temperature'] ); ?></dd>
-			<dt><?php esc_html_e( 'Humidity:', 'weather-report-widget' ); ?></dt>
-			<dd><?php echo esc_html( $report['humidity'] ); ?></dd>
-			<dt><?php esc_html_e( 'Last Updated:', 'weather-report-widget' ); ?></dt>
-			<dd><?php echo esc_html( human_time_diff( $report['updated'] ) ); ?></dd>
-		</dl>
+		<figure class="weather-report">
+			<p class="temp"><?php     echo esc_html( sprintf( __( '%s°',            'weather-report-widget' ), number_format(   $report['temperature'], 1 ) ) ); ?></p>
+			<p class="humidity"><?php echo esc_html( sprintf( __( 'Humidity: %s%%',  'weather-report-widget' ),  number_format(   $report['humidity'], 0 ) ) ); ?></p>
+			<p class="updated"><?php  echo esc_html( sprintf( __( 'Updated %s ago', 'weather-report-widget' ), human_time_diff( $report['updated'] ) ) ); ?></p>
+		</figure>
+		<style>
+			.weather-report {
+				background-color: rgba( 255, 255, 255, 0.7 );
+				padding: 3em;
+			}
+			.weather-report p {
+				margin: 0.5em 0 0;
+				padding: 0;
+				line-height: 1;
+			}
+			.weather-report .temp {
+				margin-top: 0;
+				font-size: 5em;
+				font-weight: 900;
+				color: #111;
+			}
+			.weather-report .humidity {
+				font-size: 1.2em;
+				font-weight: 600;
+			}
+			.weather-report .updated {
+				font-size: 0.9em;
+			}
+		</style>
 
 		<?php
 		echo $args['after_widget'];

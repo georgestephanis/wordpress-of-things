@@ -2,14 +2,14 @@
 #include <ESP8266HTTPClient.h>
 #include <DHT.h>
 
-const char* wifissid   = "";
-const char* wifipass   = "";
-const char* wpuser     = "";
-const char* wppass     = "";
+const char* wifissid = "WIFI SSID";
+const char* wifipass = "WIFI PASS";
+const char* wpuser   = "WORDPRESS USERNAME";
+const char* wppass   = "WORDPRESS APPLICATION PASSWORD";
 const char* secret_key = ""; // the uuid for the weather station as given by WordPress
 
-String url           = "https://stephanis.me/wp-json/wordpress-of-things/v1/weather-station/" + String( secret_key );
-String fingerprint   = "32:70:4F:7A:80:C1:71:24:80:DA:E5:8C:A1:78:6E:A4:C8:39:56:C7";
+String url           = "https://wp-of-things.pw/wp-json/wordpress-of-things/v1/weather-station/" + String( secret_key );
+String fingerprint   = "3B:EE:BF:18:77:FA:12:24:31:08:FD:6D:E1:81:9D:17:23:98:ED:74";
 
 // Initialize our connection to the sensor...
 DHT dht( D4, DHT11, 11 );
