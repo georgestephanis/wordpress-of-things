@@ -103,6 +103,7 @@ class Weather_Report_Widget extends WP_Widget {
 				margin: 0.5em 0 0;
 				padding: 0;
 				line-height: 1;
+				color: rgba( 0, 0, 0, 0.55 );
 			}
 			.weather-report .temp {
 				margin-top: 0;
