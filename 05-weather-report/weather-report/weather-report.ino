@@ -2,11 +2,11 @@
 #include <ESP8266HTTPClient.h>
 #include <DHT.h>
 
-const char* wifissid = "WIFI SSID";
-const char* wifipass = "WIFI PASS";
-const char* wpuser   = "WORDPRESS USERNAME";
-const char* wppass   = "WORDPRESS APPLICATION PASSWORD";
-const char* secret_key = ""; // the uuid for the weather station as given by WordPress
+const char* wifissid = "IU13-Conference Center";
+const char* wifipass = "";
+const char* wpuser   = "georgestephanis";
+const char* wppass   = "KCZT Dfp2 ztwS ii8U lVBa Cw9e";
+const char* secret_key = "b9c02299-9aa0-40f9-8345-e0c394b64a77"; // the uuid for the weather station as given by WordPress
 
 String url           = "https://wp-of-things.pw/wp-json/wordpress-of-things/v1/weather-station/" + String( secret_key );
 String fingerprint   = "3B:EE:BF:18:77:FA:12:24:31:08:FD:6D:E1:81:9D:17:23:98:ED:74";
