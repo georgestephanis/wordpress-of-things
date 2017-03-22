@@ -5,15 +5,15 @@
 
 Adafruit_NeoPixel neoring = Adafruit_NeoPixel( 16, D5 );
 
-const char* wifissid = "IU13-Conference Center";
-const char* wifipass = "";
-const char* wpuser   = "georgestephanis";
-const char* wppass   = "KCZT Dfp2 ztwS ii8U lVBa Cw9e";
+const char* wifissid = "wifi ssid goes here";
+const char* wifipass = "wifi pass goes here";
+const char* wpuser   = "username goes here";
+const char* wppass   = "password goes here";
 
 String url           = "https://wp-of-things.pw/wp-json/wp/v2/comments/?status=0";
 //         Or, maybe = "https://wp-of-things.pw/wp-json/wc/v2/orders/?status=processing";
 //         for unshipped orders in WooCommerce?
-String fingerprint   = "3B:EE:BF:18:77:FA:12:24:31:08:FD:6D:E1:81:9D:17:23:98:ED:74";
+String fingerprint   = "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00";
 
 const char* headerKeys[] = {
   "X-WP-Total"
